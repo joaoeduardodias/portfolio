@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import type { NextPage } from 'next';
+import { About } from '../components/About';
 import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
 import { Technologies } from '../components/Technologies';
@@ -18,6 +19,7 @@ const Home: NextPage = function () {
       <Header />
       <Hero />
       <Technologies />
+      <About />
     </Flex>
   );
 };

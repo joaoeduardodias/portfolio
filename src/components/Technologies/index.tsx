@@ -1,4 +1,4 @@
-import { Flex, Grid, Heading } from '@chakra-ui/react';
+import { Divider, Flex, Grid, Heading } from '@chakra-ui/react';
 import { Technology } from './Technology';
 
 export function Technologies(): JSX.Element {
@@ -6,14 +6,14 @@ export function Technologies(): JSX.Element {
     <Flex
       as="section"
       direction="column"
-      mb="20rem" // apagar ou diminuir após a construção do novo componente
       align="center"
-      justify="center"
       mx="auto"
       w="100%"
+      h="100vh"
       maxW={1280}
     >
-      <Heading mb="3rem">Conhecimentos</Heading>
+      <Divider mb="10" borderColor="teal.400" />
+      <Heading mb="6rem">Conhecimentos</Heading>
       <Grid
         templateColumns="repeat(auto-fill, minmax(16rem, 1fr) )"
         w="90%"
@@ -63,6 +63,7 @@ export function Technologies(): JSX.Element {
           color="blackAlpha.900"
         />
       </Grid>
+      <Divider mt="auto" borderColor="teal.400" />
     </Flex>
   );
 }
