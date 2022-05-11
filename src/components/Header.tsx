@@ -31,16 +31,28 @@ export function Header(): JSX.Element {
       </Flex>
 
       <List display="flex" gap="2rem" fontSize="2xl">
-        <ListItem _hover={{ color: 'teal.400', textDecoration: 'underline' }}>
+        <ListItem
+          _hover={{ color: 'teal.400', textDecoration: 'underline' }}
+          transitionDuration="0.5s"
+        >
           <a href="projetos">Projetos</a>
         </ListItem>
-        <ListItem _hover={{ color: 'teal.400', textDecoration: 'underline' }}>
+        <ListItem
+          _hover={{ color: 'teal.400', textDecoration: 'underline' }}
+          transitionDuration="0.5s"
+        >
           <a href="conhecimentos">Conhecimentos</a>
         </ListItem>
-        <ListItem _hover={{ color: 'teal.400', textDecoration: 'underline' }}>
+        <ListItem
+          _hover={{ color: 'teal.400', textDecoration: 'underline' }}
+          transitionDuration="0.5s"
+        >
           <a href="sobre">Sobre</a>
         </ListItem>
-        <ListItem _hover={{ color: 'teal.400', textDecoration: 'underline' }}>
+        <ListItem
+          _hover={{ color: 'teal.400', textDecoration: 'underline' }}
+          transitionDuration="0.5s"
+        >
           <a href="contato">Contato</a>
         </ListItem>
       </List>

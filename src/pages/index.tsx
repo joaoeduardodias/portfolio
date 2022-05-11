@@ -2,6 +2,7 @@ import { Flex } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
+import { Technologies } from '../components/Technologies';
 
 const Home: NextPage = function () {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = function () {
     >
       <Header />
       <Hero />
+      <Technologies />
     </Flex>
   );
 };
