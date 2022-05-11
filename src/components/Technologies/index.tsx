@@ -18,7 +18,7 @@ export function Technologies(): JSX.Element {
         templateColumns="repeat(auto-fill, minmax(16rem, 1fr) )"
         w="90%"
         mx="auto"
-        alignItems="center"
+        justifyItems="center"
         gap={3}
       >
         <Technology

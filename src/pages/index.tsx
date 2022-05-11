@@ -3,6 +3,7 @@ import type { NextPage } from 'next';
 import { About } from '../components/About';
 import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
+import { Projects } from '../components/Projects';
 import { Technologies } from '../components/Technologies';
 
 const Home: NextPage = function () {
@@ -20,6 +21,7 @@ const Home: NextPage = function () {
       <Hero />
       <Technologies />
       <About />
+      <Projects />
     </Flex>
   );
 };
