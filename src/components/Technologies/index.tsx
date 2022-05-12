@@ -9,7 +9,7 @@ export function Technologies(): JSX.Element {
       align="center"
       mx="auto"
       w="100%"
-      h="100vh"
+      minH="100vh"
       maxW={1280}
     >
       <Divider mb="10" borderColor="teal.400" />
@@ -18,6 +18,7 @@ export function Technologies(): JSX.Element {
         templateColumns="repeat(auto-fill, minmax(16rem, 1fr) )"
         w="90%"
         mx="auto"
+        mb="5"
         justifyItems="center"
         gap={3}
       >

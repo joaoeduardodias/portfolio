@@ -24,7 +24,7 @@ export function Technology({
         rounded="md"
         p="0.5"
         overflow="hidden"
-        maxW="112px"
+        maxW={['115px', '112px']}
         transition="all"
         transitionDuration="0.5s"
         transitionTimingFunction="linear"

@@ -32,7 +32,7 @@ export function Project({
       rounded="md"
       w="100%"
       h="100%"
-      p="1"
+      p="2"
       position="relative"
       cursor="pointer"
     >
@@ -50,7 +50,7 @@ export function Project({
           {title}
         </Heading>
         <Divider borderColor="teal.400" mt={1} />
-        <Text as="span" fontSize="sm" ml="1" color="gray.300">
+        <Text as="span" fontSize={['md', 'sm']} ml="1" color="gray.300">
           {description}
         </Text>
       </Flex>

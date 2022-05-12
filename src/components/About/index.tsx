@@ -1,6 +1,18 @@
-import { Avatar, Divider, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import {
+  Avatar,
+  Divider,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  useBreakpointValue
+} from '@chakra-ui/react';
 
 export function About(): JSX.Element {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+  });
   return (
     <Flex
       as="section"
@@ -11,11 +23,17 @@ export function About(): JSX.Element {
       h="100vh"
       maxW={1280}
     >
-      <Heading mb="6rem" mt="10">
+      <Heading mb={['3rem', '6rem']} mt="10">
         Sobre
       </Heading>
-      <Flex maxW="65rem" w="100%" align="center" justify="space-between">
-        <Image src="./about.svg" w="25rem" />
+      <Flex
+        maxW="65rem"
+        w="100%"
+        align="center"
+        justify={['center', 'center', 'center', 'space-between']}
+        px="15"
+      >
+        {isWideVersion && <Image src="./about.svg" w="25rem" />}
         <Flex direction="column" align="center" justify="center">
           <Avatar src="./profile.png" name="João Dias" size="2xl" mb="5" />
           <Text as="p" textAlign="center" maxW="30rem">

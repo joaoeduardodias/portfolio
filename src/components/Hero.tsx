@@ -7,11 +7,11 @@ export function Hero(): JSX.Element {
       direction="column"
       align="center"
       justify="center"
-      px="6"
+      px={['1', '3', '3', '6']}
       h="calc(100vh - 6rem)"
     >
-      <Heading fontSize="6xl">Olá, seja bem Vindo!</Heading>
-      <Text as="p" maxW="50rem" textAlign="center" fontSize="xl">
+      <Heading fontSize={['3xl', '4xl', '6xl']}>Olá, seja bem Vindo!</Heading>
+      <Text as="p" maxW="50rem" textAlign="center" fontSize={['md', 'xl']}>
         Me chamo João Dias,sou desenvolvedor fullstack web, trabalho com
         tecnologias como o ReactJS, NextJS e NodeJS. Tecnologias modernas e que
         oferecem códigos melhores e mais perfomáticos.

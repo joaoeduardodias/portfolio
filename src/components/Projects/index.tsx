@@ -9,10 +9,10 @@ export function Projects(): JSX.Element {
       align="center"
       mx="auto"
       w="100%"
-      h="100vh"
+      minH="100vh"
       maxW={1280}
     >
-      <Heading mb="6rem" mt="10">
+      <Heading mb="4rem" mt="10">
         Projetos
       </Heading>
 
@@ -22,7 +22,7 @@ export function Projects(): JSX.Element {
         mx="auto"
         mb="10"
         alignItems="center"
-        gap={4}
+        gap={5}
         justifyItems="center"
       >
         <Project
