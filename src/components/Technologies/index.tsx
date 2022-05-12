@@ -13,10 +13,11 @@ export function Technologies(): JSX.Element {
       maxW={1280}
     >
       <Divider mb="10" borderColor="teal.400" />
-      <Heading mb="6rem" id="technologies">
+      <Heading mb="6rem" id="technologies" data-aos="fade-right">
         Conhecimentos
       </Heading>
       <Grid
+        data-aos="fade-left"
         templateColumns="repeat(auto-fill, minmax(16rem, 1fr) )"
         w="90%"
         mx="auto"

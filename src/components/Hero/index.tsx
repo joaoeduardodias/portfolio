@@ -10,8 +10,16 @@ export function Hero(): JSX.Element {
       px={['1', '3', '3', '6']}
       h="calc(100vh - 6rem)"
     >
-      <Heading fontSize={['3xl', '4xl', '6xl']}>Olá, seja bem Vindo!</Heading>
-      <Text as="p" maxW="50rem" textAlign="center" fontSize={['md', 'xl']}>
+      <Heading fontSize={['3xl', '4xl', '6xl']} data-aos="fade-right">
+        Olá, seja bem Vindo!
+      </Heading>
+      <Text
+        as="p"
+        maxW="50rem"
+        textAlign="center"
+        data-aos="fade-left"
+        fontSize={['md', 'xl']}
+      >
         Me chamo João Dias,sou desenvolvedor fullstack web, trabalho com
         tecnologias como o ReactJS, NextJS e NodeJS. Tecnologias modernas e que
         oferecem códigos melhores e mais perfomáticos.

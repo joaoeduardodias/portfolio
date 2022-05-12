@@ -23,10 +23,11 @@ export function About(): JSX.Element {
       h="100vh"
       maxW={1280}
     >
-      <Heading mb={['3rem', '6rem']} mt="10" id="about">
+      <Heading mb={['3rem', '6rem']} mt="10" id="about" data-aos="fade-left">
         Sobre
       </Heading>
       <Flex
+        data-aos="fade-right"
         maxW="65rem"
         w="100%"
         align="center"

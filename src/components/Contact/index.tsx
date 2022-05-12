@@ -20,11 +20,12 @@ export function Contact(): JSX.Element {
       w="100%"
       maxW={1280}
     >
-      <Heading mb="4rem" mt="4" id="contact">
+      <Heading mb="4rem" mt="4" id="contact" data-aos="fade-right">
         Contato
       </Heading>
 
       <FormControl
+        data-aos="fade-left"
         as="form"
         maxW="50rem"
         w="90%"

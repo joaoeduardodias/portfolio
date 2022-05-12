@@ -1,5 +1,8 @@
 import { Flex } from '@chakra-ui/react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import type { NextPage } from 'next';
+import { useEffect } from 'react';
 import { About } from '../components/About';
 import { Contact } from '../components/Contact';
 import { Header } from '../components/Header';
@@ -9,6 +12,10 @@ import { Projects } from '../components/Projects';
 import { Technologies } from '../components/Technologies';
 
 const Home: NextPage = function () {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
+
   return (
     <Flex
       direction="column"
