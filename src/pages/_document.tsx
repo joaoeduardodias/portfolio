@@ -1,11 +1,10 @@
 import { ColorModeScript, theme } from '@chakra-ui/react';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
-
 export default class MyDocument extends Document {
   render(): JSX.Element {
     return (
-      <Html>
+      <Html style={{ scrollBehavior: 'smooth' }}>
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />

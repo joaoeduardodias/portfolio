@@ -27,7 +27,7 @@ export function Project({
 }: ProjectProps): JSX.Element {
   return (
     <GridItem
-      border="2px"
+      border="1px"
       borderColor="teal.400"
       rounded="md"
       w="100%"
