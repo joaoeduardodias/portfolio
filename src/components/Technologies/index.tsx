@@ -13,7 +13,9 @@ export function Technologies(): JSX.Element {
       maxW={1280}
     >
       <Divider mb="10" borderColor="teal.400" />
-      <Heading mb="6rem">Conhecimentos</Heading>
+      <Heading mb="6rem" id="technologies">
+        Conhecimentos
+      </Heading>
       <Grid
         templateColumns="repeat(auto-fill, minmax(16rem, 1fr) )"
         w="90%"

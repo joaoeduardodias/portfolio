@@ -23,7 +23,7 @@ export function About(): JSX.Element {
       h="100vh"
       maxW={1280}
     >
-      <Heading mb={['3rem', '6rem']} mt="10">
+      <Heading mb={['3rem', '6rem']} mt="10" id="about">
         Sobre
       </Heading>
       <Flex

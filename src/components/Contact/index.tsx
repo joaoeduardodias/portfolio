@@ -20,7 +20,7 @@ export function Contact(): JSX.Element {
       w="100%"
       maxW={1280}
     >
-      <Heading mb="4rem" mt="4">
+      <Heading mb="4rem" mt="4" id="contact">
         Contato
       </Heading>
 

@@ -12,7 +12,7 @@ export function Projects(): JSX.Element {
       minH="100vh"
       maxW={1280}
     >
-      <Heading mb="4rem" mt="10">
+      <Heading mb="4rem" mt="10" id="projects">
         Projetos
       </Heading>
 

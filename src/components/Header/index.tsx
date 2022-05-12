@@ -10,7 +10,7 @@ import {
   useBreakpointValue
 } from '@chakra-ui/react';
 import { RiMenuLine } from 'react-icons/ri';
-import { useSidebarDrawer } from '../contexts/SidebarDrawerContext';
+import { useSidebarDrawer } from '../../contexts/SidebarDrawerContext';
 
 export function Header(): JSX.Element {
   const { onOpen } = useSidebarDrawer();
@@ -58,25 +58,25 @@ export function Header(): JSX.Element {
             _hover={{ color: 'teal.400', textDecoration: 'underline' }}
             transitionDuration="0.5s"
           >
-            <a href="conhecimentos">Conhecimentos</a>
+            <a href="#technologies">Conhecimentos</a>
           </ListItem>
           <ListItem
             _hover={{ color: 'teal.400', textDecoration: 'underline' }}
             transitionDuration="0.5s"
           >
-            <a href="sobre">Sobre</a>
+            <a href="#about">Sobre</a>
           </ListItem>
           <ListItem
             _hover={{ color: 'teal.400', textDecoration: 'underline' }}
             transitionDuration="0.5s"
           >
-            <a href="projetos">Projetos</a>
+            <a href="#projects">Projetos</a>
           </ListItem>
           <ListItem
             _hover={{ color: 'teal.400', textDecoration: 'underline' }}
             transitionDuration="0.5s"
           >
-            <a href="contato">Contato</a>
+            <a href="#contact">Contato</a>
           </ListItem>
         </List>
       ) : (
