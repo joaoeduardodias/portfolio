@@ -8,6 +8,10 @@ const clientId = process.env.CLIENT_ID;
 const clientSecret = process.env.CLIENT_SECRET;
 const refreshToken = process.env.REFRESH_TOKEN;
 
+interface NodemailerTransporterGmail {
+  service: string;
+}
+
 const { OAuth2 } = google.auth;
 
 const OAuth2_client = new OAuth2(clientId, clientSecret);
@@ -16,7 +20,7 @@ OAuth2_client.setCredentials({ refresh_token: refreshToken });
 const accessToken = OAuth2_client.getAccessToken();
 
 const transporter = nodemailer.createTransport({
-  service: `gmail`,
+  service: 'gmail',
   auth: {
     type: 'OAuth2',
     user: email,
@@ -25,7 +29,7 @@ const transporter = nodemailer.createTransport({
     refreshToken,
     accessToken,
   },
-});
+} as NodemailerTransporterGmail);
 
 interface MailerProps {
   senderMail: string;
@@ -33,7 +37,7 @@ interface MailerProps {
   text: string;
 }
 
-const mailer = ({ senderMail, name, text }: MailerProps): Promise<any> => {
+const mailer = ({ senderMail, name, text }: MailerProps): Promise<unknown> => {
   const from =
     name && senderMail ? `${name} <${senderMail}> ` : `${name || senderMail}`;
 
@@ -41,7 +45,7 @@ const mailer = ({ senderMail, name, text }: MailerProps): Promise<any> => {
     from,
     to: `${email}`,
     subject: `Nova mensagem de contato - ${name}`,
-    text: `Email - <${senderMail} \n> ${text}`,
+    text: `Email - <${senderMail}> \n ${text}`,
     replyTo: from,
   };
 
