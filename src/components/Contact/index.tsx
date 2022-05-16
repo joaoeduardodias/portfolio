@@ -108,6 +108,7 @@ export function Contact(): JSX.Element {
           isRequired
           placeholder="Mensagem..."
           variant="outline"
+          resize="none"
           value={message}
           onChange={e => setMessage(e.target.value)}
         />

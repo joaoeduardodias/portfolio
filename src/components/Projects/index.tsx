@@ -29,50 +29,50 @@ export function Projects(): JSX.Element {
         <Project
           description="Newsletter de reactJS"
           imgSrc="./project.png"
-          linkGithub="https://github.com/joaoeduardodias"
+          linkGithub="https://github.com/joaoeduardodias/ig.news"
           title="Ig.News"
         />
         <Project
-          description="Projeto de uma empresa de viagens"
+          description="Projeto de landing page para uma empresa de viagens aéreas"
           imgSrc="./project2.png"
-          linkGithub="https://github.com/joaoeduardodias"
+          linkGithub="https://github.com/joaoeduardodias/challenge-chakra-ui"
           title="World Trip"
         />
         <Project
-          description="Newsletter de reactJS"
-          imgSrc="./project.png"
-          linkGithub="https://github.com/joaoeduardodias"
-          title="Ig.News"
+          description="Dashboard para web apps"
+          imgSrc="./dashgo.png"
+          linkGithub="https://github.com/joaoeduardodias/dashgo"
+          title="DashGo"
         />
         <Project
-          description="Projeto de uma empresa de viagens"
+          description="projeto desenvolvido no evento NLW da rocketseat"
+          imgSrc="./moveit.png"
+          linkGithub="https://github.com/joaoeduardodias/move-it"
+          title="Move it"
+        />
+        <Project
+          description="Calculadora feita usando socket.io para comunicação em tempo real"
           imgSrc="./project2.png"
-          linkGithub="https://github.com/joaoeduardodias"
-          title="World Trip"
+          linkGithub="https://github.com/joaoeduardodias/WebCalc"
+          title="Web calc"
         />
         <Project
-          description="Newsletter de reactJS"
-          imgSrc="./project.png"
-          linkGithub="https://github.com/joaoeduardodias"
-          title="Ig.News"
+          description="Projeto desenvolvido no treinamento de ReactJS, Ignite"
+          imgSrc="./rocketshoes.png"
+          linkGithub="https://github.com/joaoeduardodias/rocketshoes"
+          title="RocketShoes"
         />
         <Project
-          description="Projeto de uma empresa de viagens"
-          imgSrc="./project2.png"
-          linkGithub="https://github.com/joaoeduardodias"
-          title="World Trip"
+          description="Projeto desenvolvido no treinamento de ReactJS, Ignite"
+          imgSrc="./gorestaunt.png"
+          linkGithub="https://github.com/joaoeduardodias/desafio-04-ReactJS"
+          title="Go Restaurant"
         />
         <Project
-          description="Newsletter de reactJS"
-          imgSrc="./project.png"
-          linkGithub="https://github.com/joaoeduardodias"
-          title="Ig.News"
-        />
-        <Project
-          description="Projeto de uma empresa de viagens"
-          imgSrc="./project2.png"
-          linkGithub="https://github.com/joaoeduardodias"
-          title="World Trip"
+          description="Portfólio criado com o objetivo de mostrar o parte do meu conhecimento no desenvolvimento web"
+          imgSrc="./portfolio.png"
+          linkGithub="https://github.com/joaoeduardodias/portfolio"
+          title="Portfólio"
         />
       </Grid>
 
