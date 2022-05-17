@@ -1,4 +1,9 @@
-import { extendTheme } from '@chakra-ui/react';
+import { extendTheme, type ThemeConfig } from '@chakra-ui/react';
+import { GlobalStyleProps, mode } from '@chakra-ui/theme-tools';
+const config: ThemeConfig = {
+  initialColorMode: 'system',
+  useSystemColorMode: true,
+}
 
 export const theme = extendTheme({
   fonts: {
@@ -6,10 +11,10 @@ export const theme = extendTheme({
     body: 'Roboto',
   },
   styles: {
-    global: {
+    global: (props: GlobalStyleProps) => ({
       body: {
-        bg: 'gray.900',
-        color: 'gray.50',
+        bg: mode('whiteAlpha.800','gray.900')(props),
+        color: mode('blackAlpha.800','gray.50')(props),
       },
 
       '*::-webkit-scrollbar': {
@@ -23,6 +28,7 @@ export const theme = extendTheme({
       '*::-webkit-scrollbar-track': {
         bg: 'gray.500',
       },
-    },
+    })
   },
+  config,
 });
