@@ -44,6 +44,7 @@ export function Project({
           rounded="md"
           objectFit="cover"
           mb={4}
+          imageRendering="pixelated"
         />
         <Heading as="h4" fontSize="2xl" ml="1">
           {title}
