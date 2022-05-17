@@ -1,18 +1,19 @@
 import {
-  Button,
   Flex, Icon,
   IconButton,
   List,
-  ListItem, useBreakpointValue, useColorMode
+  ListItem, useBreakpointValue, useColorModeValue
 } from '@chakra-ui/react';
-import { FaMoon, FaSun } from 'react-icons/fa';
 import { RiMenuLine } from 'react-icons/ri';
 import { useSidebarDrawer } from '../../contexts/SidebarDrawerContext';
+import { ButtonThemeSwitch } from './ButtonThemeSwitch';
 import { Profile } from './Profile';
 
 export function Header(): JSX.Element {
-  const {colorMode ,toggleColorMode} = useColorMode()
   const { onOpen } = useSidebarDrawer();
+  const bgColor = useColorModeValue('white', "gray.900")
+  const borderColor = useColorModeValue('teal.400', "gray.700")
+
   const isWideVersion = useBreakpointValue({
     base: false,
     lg: true,
@@ -22,24 +23,30 @@ export function Header(): JSX.Element {
     <Flex
       as="header"
       w="100%"
-      maxW={1480}
-      h="20"
+      h="24"
+      position="fixed"
+      top="0"
+      bg={bgColor}
+      borderBottom="1px"
+      borderColor={borderColor}
+      py="4"
+      zIndex={10}
+      
+    >
+      <Flex
+       w="100%"
+       h="100%"
       mx="auto"
-      mt="4"
+      maxW={1480}
       px={['1rem', '3rem', '3rem', '6rem']}
       align="center"
       justify="space-between"
-    >
-     <Profile />
+      
+      >
+      <Profile />
       {isWideVersion ? (
         <List display="flex" gap="2rem" alignItems="center" fontSize="xl" >
-          <ListItem>
-            <Button variant="unstyled" onClick={toggleColorMode} p="0">
-              {colorMode === 'dark' ? <Icon as={FaSun} fontSize="3xl"/> : <Icon as={FaMoon}fontSize="3xl" />}
-              
-            </Button>
-            
-          </ListItem>
+         <ButtonThemeSwitch />
           <ListItem
             _hover={{ color: 'teal.400', textDecoration: 'underline' }}
             transitionDuration="0.5s"
@@ -75,6 +82,7 @@ export function Header(): JSX.Element {
           mr="2"
         />
       )}
+      </Flex>
     </Flex>
   );
 }

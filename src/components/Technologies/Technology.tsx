@@ -1,4 +1,4 @@
-import { Flex, GridItem, Heading, Image, Text } from '@chakra-ui/react';
+import { Flex, GridItem, Heading, Image, Text, useColorModeValue } from '@chakra-ui/react';
 
 interface TechnologyProps {
   title: string;
@@ -13,6 +13,10 @@ export function Technology({
   summary,
   color,
 }: TechnologyProps): JSX.Element {
+  const colorText = useColorModeValue('gray.800', "gray.400")
+
+
+
   return (
     <GridItem w="auto">
       <Flex
@@ -47,7 +51,7 @@ export function Technology({
             fontSize="sm"
             ml="2"
             lineHeight="1"
-            color="gray.400"
+            color={colorText}
             align="left"
           >
             {summary}

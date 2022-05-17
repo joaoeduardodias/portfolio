@@ -7,7 +7,6 @@ import {
   Tag,
   TagLabel,
   TagLeftIcon,
-  // eslint-disable-next-line prettier/prettier
   Text
 } from '@chakra-ui/react';
 import { BsGithub } from 'react-icons/bs';
@@ -58,12 +57,12 @@ export function Project({
       <Tag
         size="md"
         variant="solid"
-        colorScheme="teal"
+        bg="teal.500"
         position="absolute"
         top={7}
         right={-3}
         _hover={{
-          background: 'teal.700',
+          background: 'teal.600',
         }}
         transitionDuration="0.5s"
       >

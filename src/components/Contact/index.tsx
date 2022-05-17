@@ -8,7 +8,8 @@ import {
   Input,
   Stack,
   Textarea,
-  theme
+  theme,
+  useColorModeValue
 } from '@chakra-ui/react';
 import { FormEvent, useState } from 'react';
 import toast from 'react-hot-toast';
@@ -19,6 +20,9 @@ export function Contact(): JSX.Element {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
+  const color = useColorModeValue('gray.600', 'gray.300')
+  const buttonBackground = useColorModeValue('green.300', 'green.500')
+  const buttonHoverBackground = useColorModeValue('green.500', 'green.700')
 
   async function handleSubmit(e: FormEvent): Promise<void> {
     e.preventDefault();
@@ -78,8 +82,17 @@ export function Contact(): JSX.Element {
               size="lg"
               placeholder="Nome"
               isRequired
+              borderColor={color}
+              border="2px"
               value={name}
               onChange={e => setName(e.target.value)}
+              _hover={{
+                borderColor: color,
+              }}
+              _placeholder={{
+                color,
+                opacity: 0.8,
+              }}
             />
           </Stack>
 
@@ -92,10 +105,20 @@ export function Contact(): JSX.Element {
               type="email"
               variant="outline"
               id="email"
+              borderColor={color}
+              border="2px"
               size="lg"
               isRequired
               value={email}
               onChange={e => setEmail(e.target.value)}
+              _hover={{
+                borderColor: color,
+              }}
+              _placeholder={{
+                color,
+                opacity: 0.8,
+              }}
+              
             />
           </Stack>
         </Stack>
@@ -105,20 +128,32 @@ export function Contact(): JSX.Element {
         <Textarea
           id="message"
           size="lg"
+          borderColor={color}
+          border="2px"
           isRequired
           placeholder="Mensagem..."
           variant="outline"
           resize="none"
           value={message}
           onChange={e => setMessage(e.target.value)}
+          _hover={{
+            borderColor: color,
+          }}
+          _placeholder={{
+            color,
+            opacity: 0.8,
+          }}
         />
         <Button
           type="submit"
-          colorScheme="green"
+          bg={buttonBackground}
           w="6rem"
           ml="auto"
           mt="3"
           isLoading={loading}
+          _hover={{
+            background: buttonHoverBackground,
+          }}
         >
           Enviar
         </Button>

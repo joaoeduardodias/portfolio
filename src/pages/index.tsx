@@ -26,17 +26,8 @@ const Home: NextPage = function () {
       mx="auto"
       minH="100vh"
       overflowX="hidden"
-      // edit scrollbar
-      css={{
-        '&::-webkit-scrollbar': {
-          width: '16px',
-          borderRadius: '8px',
-          backgroundColor: `#000000c`,
-        },
-        '&::-webkit-scrollbar-thumb': {
-          backgroundColor: `#000000c`,
-        },
-      }}
+      position="relative"
+        
     >
       <Header />
       <MenuDrawer />

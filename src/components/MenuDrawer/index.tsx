@@ -7,12 +7,15 @@ import {
   List,
   ListItem,
   Stack,
-  useBreakpointValue
+  useBreakpointValue,
+  useColorModeValue
 } from '@chakra-ui/react';
 import { useSidebarDrawer } from '../../contexts/SidebarDrawerContext';
+import { ButtonThemeSwitch } from '../Header/ButtonThemeSwitch';
 
 export function MenuDrawer(): JSX.Element {
   const { isOpen, onClose } = useSidebarDrawer();
+  const bgDrawer = useColorModeValue('gray.200', "gray.800")
   const isDrawerSideBar = useBreakpointValue({
     base: true,
     lg: false,
@@ -23,7 +26,7 @@ export function MenuDrawer(): JSX.Element {
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay>
           <DrawerContent
-            bg="gray.800"
+            bg={bgDrawer}
             p="4"
             alignItems="center"
             justifyContent="center"
@@ -33,6 +36,7 @@ export function MenuDrawer(): JSX.Element {
             <DrawerBody>
               <List mt="13rem" textAlign="center" fontSize="2xl">
                 <Stack spacing={5}>
+                  <ButtonThemeSwitch />
                   <ListItem
                     _hover={{ color: 'teal.400', textDecoration: 'underline' }}
                     transitionDuration="0.5s"
