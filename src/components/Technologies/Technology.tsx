@@ -43,7 +43,7 @@ export function Technology({
 
           <Flex direction="column" align="center" minW="102px" >
             <Image
-              border="1px"
+          
               src={`./${imgSrc}`}
               w="100px"
               h="100px"
@@ -55,7 +55,7 @@ export function Technology({
               fontSize="xl"
               mt="3"
               textAlign="center"
-            // ml="2"
+           
             >
               {title}
             </Heading>
