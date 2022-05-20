@@ -37,35 +37,49 @@ export function Technology({
           maxWidth: '1000px',
         }}
       >
-        <Flex align="center">
-          <Image
-            src={`./${imgSrc}`}
-            minW="100px"
-            maxH="100px"
-            objectFit="contain"
-            rounded="md"
-          />
+
+
+        <Flex align="top" h="9rem" >
+
+          <Flex direction="column" align="center" minW="102px" >
+            <Image
+              border="1px"
+              src={`./${imgSrc}`}
+              w="100px"
+              h="100px"
+              objectFit="contain"
+              rounded="md"
+            />
+            <Heading
+              as="h3"
+              fontSize="xl"
+              mt="3"
+              textAlign="center"
+            // ml="2"
+            >
+              {title}
+            </Heading>
+          </Flex>
+
           <Text
-            maxW="10rem"
+            maxW="0"
             maxH="100px"
             fontSize="sm"
             ml="2"
             lineHeight="1"
             color={colorText}
             align="left"
+            transition="all"
+            transitionDuration="0.5s"
+            _groupHover={{
+              maxW: "100%",
+            }}
+
           >
             {summary}
           </Text>
         </Flex>
-        <Heading
-          as="h3"
-          fontSize="xl"
-          mt="2"
-          textAlign="center"
-          _groupHover={{ textAlign: 'left', marginLeft: '1rem' }}
-        >
-          {title}
-        </Heading>
+
       </Flex>
     </GridItem>
   );
